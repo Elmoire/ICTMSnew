@@ -41,15 +41,6 @@ return new class extends Migration
         Schema::create('conference_room_requests', function (Blueprint $table) {
             $table->string('CRequestID', 10)->primary();
             $table->string('OfficeID');
-<<<<<<< Updated upstream
-            $table->string('Purpose', 100);
-            $table->string('date_start', 10);
-            $table->string('date_end', 10);
-            $table->string('time_start', 9);
-            $table->string('time_end', 9);
-            $table->integer('npersons');
-            $table->string('focalPerson', 50);
-=======
             $table->string('PurposeID')->nullable()->default(null);
             $table->string('PurposeOthers')->nullable()->default(null);
             $table->string('date_start', 50);
@@ -61,7 +52,6 @@ return new class extends Migration
             $table->string('FocalPID')->nullable()->default(null);
             $table->string('FPOthers')->nullable()->default(null);
             $table->boolean('CAvailability')->default(true)->nullable();
->>>>>>> Stashed changes
             $table->integer('tables')->nullable();
             $table->integer('chairs')->nullable();
             $table->string('otherFacilities', 50)->nullable();
